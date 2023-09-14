@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\SearchFilmsController;
+use App\Http\Controllers\MoviesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,7 +28,10 @@ Route::middleware('auth', 'verified')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get('/search-film', [SearchFilmsController::class, 'index'])->name('search-film.index');
+    Route::get('/search-film', [MoviesController::class, 'search'])->name('search.search');
+    Route::get('/recent-searches', [MoviesController::class, 'recentSearchs'])->name('search.recentSearchs');
+    Route::get('/plataforms', [MoviesController::class, 'editPlataform'])->name('search.editPlataform');
+    Route::patch('/plataforms', [MoviesController::class, 'updatePlataform'])->name('search.updatePlataform');
 });
 
 require __DIR__.'/auth.php';
