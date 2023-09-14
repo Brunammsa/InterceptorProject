@@ -40,7 +40,7 @@ Route::get('/auth/{driver}/callback', function ($driver) {
 
     Auth::login($user);
 
-    return redirect()->route('search-film.create');
+    return redirect()->route('search.search');
 });
 
 Route::middleware('guest')->group(function () {
