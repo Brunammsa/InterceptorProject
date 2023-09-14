@@ -12,15 +12,15 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex gap-3">
-                    <x-nav-link :href="route('search-film.index')" :active="request()->routeIs('search-film.index')">
+                    <x-nav-link :href="route('search.search')" :active="request()->routeIs('search.search')">
                         {{ __('Buscar filme') }}
                     </x-nav-link>
-                    {{-- <x-nav-link :href="route('fazer')" :active="request()->routeIs('fazer rota')">
+                    <x-nav-link :href="route('search.recentSearchs')" :active="request()->routeIs('search.recentSearchs')">
                         {{ __('Buscas recentes') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('fazer')" :active="request()->routeIs('fazer rota')">
+                    <x-nav-link :href="route('search.editPlataform')" :active="request()->routeIs('search.editPlataform')">
                         {{ __('Minhas plataformas') }}
-                    </x-nav-link> --}}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -73,16 +73,22 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('search-film.index')" :active="request()->routeIs('search-film.index')">
-                {{ __('Dashboard') }}
+            <x-responsive-nav-link :href="route('search.search')" :active="request()->routeIs('search.search')">
+                {{ __('Buscar filme') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('search.recentSearchs')" :active="request()->routeIs('search.recentSearchs')">
+                {{ __('Buscas Recentes') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('search.updatePlataform')" :active="request()->routeIs('search.updatePlataform')">
+                {{ __('Minhas plataformas') }}
             </x-responsive-nav-link>
         </div>
 
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200 dark:border-gray-600">
             <div class="px-4">
-                <div class="font-medium text-base text-gray-800 dark:text-gray-200">{{ Auth::user()->name }}</div>
-                <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
+                <div class="font-medium text-base text-white dark:text-gray-200">{{ Auth::user()->name }}</div>
+                <div class="font-medium text-sm text-white">{{ Auth::user()->email }}</div>
             </div>
 
             <div class="mt-3 space-y-1">
