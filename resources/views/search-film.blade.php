@@ -6,7 +6,7 @@
     </x-slot> --}}
 
     <div class="py-12">
-        <div class="max-w-5xl mx-auto md:px-6 lg:px-8">
+        <div class="max-w-5xl mx-auto px-3 md:px-6 lg:px-8">
             <div class="bg-zinc-300 dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100 flex justify-start items-baseline">
                     <div>
@@ -18,11 +18,11 @@
                         <x-text-input id="movies-name" class="block mt-1 md:w-48 lg:w-96" type="text" name="movies-name" placeholder="Digite o nome do filme" required autofocus/>
                     </div>
                 </div>
-                <div class="relative p-6 flex w-full flex-col rounded-xl bg-clip-border text-gray-700 shadow-md grid grid-cols-3 gap-4">
+                <div class="relative p-6 w-full rounded-xl bg-clip-border text-gray-700 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-5">
                     <div>
                         <div class="block rounded-lg bg-white shadow-lg dark:bg-neutral-700">
                             <a href="#!">
-                                <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg" alt="" /></a>
+                                <img class="rounded-lg" src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg" alt=""/></a>
                             <div class="p-6 text-center text-center">
                                 <h5
                                 class="mb-2 text-sm text-center font-medium leading-tight text-neutral-800 dark:text-neutral-50">
@@ -64,36 +64,12 @@
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <div class="block rounded-lg bg-white shadow-lg dark:bg-neutral-700">
-                            <a href="#!">
-                                <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg" alt="" /></a>
-                            <div class="p-6 text-center">
-                                <h5
-                                class="mb-2 text-sm text-center font-medium leading-tight text-neutral-800 dark:text-neutral-50">
-                                2023
-                                </h5>
-                                <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
-                                pinoquio
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="block rounded-lg bg-white shadow-lg dark:bg-neutral-700">
-                            <a href="#!">
-                                <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg" alt="" /></a>
-                            <div class="p-6 text-center">
-                                <h5
-                                class="mb-2 text-sm text-center font-medium leading-tight text-neutral-800 dark:text-neutral-50">
-                                2023
-                                </h5>
-                                <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200">
-                                perdida
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+
+
+                    
+                </div>
+                <div class="p-6 flex justify-center">
+                    1 2 3 ... 100
                 </div>
             </div>
         </div>
