@@ -6,8 +6,8 @@
     </x-slot> --}}
 
     <div class="py-12">
-        <div class="max-w-5xl mx-auto px-3 md:px-6 lg:px-8">
-            <div class="bg-zinc-300 dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+        <div class="max-w-5xl mx-auto px-5 md:px-6 lg:px-8">
+            <div class="bg-zinc-300 dark:bg-gray-800 overflow-hidden shadow-sm rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100 flex justify-start items-baseline">
                     <div>
                         <select class="form-select rounded me-3" name="countries" id="countries">
@@ -15,7 +15,7 @@
                         </select>
                     </div>
                     <div>
-                        <x-text-input id="movies-name" class="block mt-1 md:w-48 lg:w-96" type="text" name="movies-name" placeholder="Digite o nome do filme" required autofocus/>
+                        <x-text-input id="movies-name" class="block mt-1 md:w-80 lg:w-96" type="text" name="movies-name" placeholder="Digite o nome do filme" required autofocus/>
                     </div>
                 </div>
                 <div class="relative p-6 w-full rounded-xl bg-clip-border text-gray-700 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-5">
