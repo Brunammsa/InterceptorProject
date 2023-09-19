@@ -26,4 +26,9 @@ class MoviesController extends Controller
     {
         return to_route('plataforms');
     }
+
+    public function indexMovie():View
+    {
+        return view('index-movie');
+    }
 }

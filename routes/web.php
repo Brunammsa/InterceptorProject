@@ -31,6 +31,7 @@ Route::middleware('auth', 'verified')->group(function () {
     Route::get('/search-film', [MoviesController::class, 'search'])->name('search.search');
     Route::get('/recent-searches', [MoviesController::class, 'recentSearchs'])->name('search.recentSearchs');
     Route::get('/plataforms', [MoviesController::class, 'editPlataform'])->name('search.editPlataform');
+    Route::get('/index-movie', [MoviesController::class, 'indexMovie'])->name('search.indexMovie');
     Route::patch('/plataforms', [MoviesController::class, 'updatePlataform'])->name('search.updatePlataform');
 });
 
