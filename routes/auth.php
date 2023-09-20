@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Validator;
 use Laravel\Socialite\Facades\Socialite;
+use Ramsey\Uuid\Uuid;
 
 Route::get('/login/{driver}/redirect', function ($driver) {
     Validator::validate(compact('driver'), ['driver' => 'required|in:google,facebook']);
@@ -32,6 +33,7 @@ Route::get('/auth/{driver}/callback', function ($driver) {
     $user = User::updateOrCreate([
         'provider_id' => $socialUser->id,
     ], [
+        'uuid' => Uuid::uuid4(),
         'name' => $socialUser->name,
         'provider' => $driver,
         'email' => $socialUser->email,
