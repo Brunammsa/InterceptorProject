@@ -9,41 +9,14 @@ use App\Http\Controllers\Auth\PasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
-use App\Models\User;
-use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\LoginSocialiteController;
+
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Validator;
-use Laravel\Socialite\Facades\Socialite;
-use Ramsey\Uuid\Uuid;
-
-Route::get('/login/{driver}/redirect', function ($driver) {
-    Validator::validate(compact('driver'), ['driver' => 'required|in:google,facebook']);
-
-    return Socialite::driver($driver)->redirect();
-})->name('login.social.redirect');
-
-Route::get('/auth/{driver}/callback', function ($driver) {
-    $socialUser = Socialite::driver($driver)->stateless()->user();
-
-    $passwordCrypto = random_bytes(10);
-    $randomPassword = base64_encode($passwordCrypto);
-    $passwordHashed = password_hash($randomPassword, PASSWORD_BCRYPT);
 
 
-    $user = User::updateOrCreate([
-        'provider_id' => $socialUser->id,
-    ], [
-        'uuid' => Uuid::uuid4(),
-        'name' => $socialUser->name,
-        'provider' => $driver,
-        'email' => $socialUser->email,
-        'password' => $passwordHashed,
-    ]);
+Route::get('/login/{driver}/redirect', [LoginSocialiteController::class, 'validator'])->name('login.social.redirect');
 
-    Auth::login($user);
-
-    return redirect()->route('search.search');
-});
+Route::get('/auth/{driver}/callback', [LoginSocialiteController::class, 'callbackSocialite']);
 
 Route::middleware('guest')->group(function () {
     Route::get('register', [RegisteredUserController::class, 'create'])
