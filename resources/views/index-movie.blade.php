@@ -30,22 +30,18 @@
                     <div class="mt-5 flex flex-row items-center">
                         <p>🇧🇪 Belgica</p>
                     </div>
-                    <div class="mt-5 flex flex-col md:flex-row lg:flex-row">
-                        <div class="flex flex-row items-center m-2 gap-3 bg-amber-200 border rounded-md">
+                    <div class="mt-5 flex flex-col md:flex-row lg:flex-row md:space-x-3 lg:space-x-3">
+                        <div class="p-2 flex items-center m-2 space-x-3 bg-amber-200 border rounded-md">
                             <img width="38" height="38" src="https://img.icons8.com/color/48/netflix-desktop-app--v1.png" alt="netflix-desktop-app--v1"/>
                             <p class="pr-2">Netflix</p>
                         </div>
-                        <div class="flex flex-row items-center m-2 gap-3">
-                            <img width="36" height="36" src="https://img.icons8.com/ios-filled/50/hbo-max.png" alt="hbo-max"/>
-                            <p>HBO Max</p>
-                        </div>
-                        <div class="pr-2 flex flex-row items-center m-2 gap-3 bg-amber-200 border rounded-md">
-                            <img width="40" height="40" src="https://img.icons8.com/fluency/48/amazon-prime-video.png" alt="amazon-prime-video"/>
-                            <p>Amazon Prime</p>
-                        </div>
-                        <div class="pr-2 flex flex-row items-center m-2 gap-3 bg-amber-200 border rounded-md">
+                        <div class="p-2 flex items-center m-2 space-x-3 bg-amber-200 border rounded-md">
                             <img width="40" height="40" src="https://images.justwatch.com/icon/52449861/s100" alt="amazon-prime-video"/>
                             <p>Amazon Prime</p>
+                        </div>
+                        <div class="flex items-center m-2 space-x-3">
+                            <img width="36" height="36" src="https://img.icons8.com/ios-filled/50/hbo-max.png" alt="hbo-max"/>
+                            <p>HBO Max</p>
                         </div>
                     </div>
                     <div class="mt-10">
