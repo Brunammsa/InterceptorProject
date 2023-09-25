@@ -3,16 +3,16 @@
         <div class=" max-w-5xl mx-auto px-5 md:px-6 lg:px-8">
             <div class="bg-gray-modificate overflow-hidden shadow-md rounded-lg">
                 <div class="p-6 text-blue-jeans">
-                    <div class="flex flex-col md:flex-row grid md:grid-cols-3 lg:grid-cols-3 md:gap-10 lg:gap-20 items-center">
-                        <div class="text-center">
-                            <img class="rounded-lg mb-3" width="300" height="300"
-                                src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"/></a>
+                    <div class="flex flex-col md:grid md:grid-cols-3 lg:grid-cols-3 md:gap-10 lg:gap-20 items-center">
+                        <div class="text-center md:col-span-1 lg:col-span-1">
+                            <img class="rounded-lg mb-3" width="300" height="300" src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"/>
                         </div>
                         <div class="flex flex-col md:col-span-2 lg:col-span-2 items-center">
                             <h1 class="mb-2 text-center">O retorno do batman</h1>
                             <p class="text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo inventore natus rerum pariatur. Repellendus incidunt vero quod corporis minus corrupti dolorem blanditiis nostrum saepe dolores maxime repellat nam, fugit ut!</p>
                         </div>
                     </div>
+                    
                     <div class="flex sm:flex-wrap text-sm text-center justify-around gap-4 mt-10 lg:text-base">
                         <div>
                             <h1>Fulano de tal</h1>
@@ -30,7 +30,7 @@
                     <div class="mt-5 flex flex-row items-center">
                         <p>🇧🇪 Belgica</p>
                     </div>
-                    <div class="mt-5 flex flex-col md:flex-row lg:flex-row gap-5">
+                    <div class="mt-5 flex flex-col md:flex-row lg:flex-row">
                         <div class="flex flex-row items-center m-2 gap-3 bg-amber-200 border rounded-md">
                             <img width="38" height="38" src="https://img.icons8.com/color/48/netflix-desktop-app--v1.png" alt="netflix-desktop-app--v1"/>
                             <p class="pr-2">Netflix</p>
@@ -50,12 +50,12 @@
                     </div>
                     <div class="mt-10">
                         <p>
-                            Caso queira buscar por outros países
+                            Deseja buscar por outros países?
                         </p>
                     </div>
                     <div class="mt-2">
                         <button type="button" class="border border-transparent bg-sky-500 hover:bg-sky-700 shadow-md rounded-md text-center text-sm p-2 text-white font-semibold">
-                            Busque aqui
+                            Buscar
                         </button>
                     </div>
                 </div>
