@@ -33,5 +33,8 @@
                 {{ $slot }}
             </main>
         </div>
+        <footer class="bg-yellow-lemon text-sm text-center">
+            Desenvolvido por B&B
+        </footer>
     </body>
 </html>

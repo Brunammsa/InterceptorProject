@@ -1,16 +1,16 @@
 <x-app-layout>
     <div class=" py-12">
         <div class=" max-w-5xl mx-auto px-5 md:px-6 lg:px-8">
-            <div class="bg-zinc-300 overflow-hidden shadow-md rounded-lg">
-                <div class="p-6 text-gray-900">
+            <div class="bg-gray-modificate overflow-hidden shadow-md rounded-lg">
+                <div class="p-6 text-blue-jeans">
                     <div class="flex flex-col md:flex-row lg:flex-row md:gap-10 lg:gap-20 items-center">
                         <div class="text-center">
-                            <img class="mb-3" width="200" height="200"
+                            <img class="rounded-lg mb-3" width="300" height="300"
                                 src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg"/></a>
                         </div>
-                        <div class="">
+                        <div class="flex flex-col items-center">
                             <h1 class="mb-2 text-center">O retorno do batman</h1>
-                            <p class="text-justify w-full">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo inventore natus rerum pariatur. Repellendus incidunt vero quod corporis minus corrupti dolorem blanditiis nostrum saepe dolores maxime repellat nam, fugit ut!</p>
+                            <p class="text-justify flex-auto w-5/6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo inventore natus rerum pariatur. Repellendus incidunt vero quod corporis minus corrupti dolorem blanditiis nostrum saepe dolores maxime repellat nam, fugit ut!</p>
                         </div>
                     </div>
                     <div class="flex sm:flex-wrap text-sm text-center justify-around gap-4 mt-5 lg:text-base">
@@ -30,7 +30,7 @@
                     <div class="mt-5 flex flex-row items-center">
                         <p>🇧🇪 Belgica</p>
                     </div>
-                    <div class="mt-5 flex flex-wrap gap-10">
+                    <div class="mt-5 flex flex-col md:flex-wrap lg:flex-row gap-5">
                         <div class="flex flex-row items-center gap-3 bg-amber-200 border rounded-md">
                             <img width="38" height="38" src="https://img.icons8.com/color/48/netflix-desktop-app--v1.png" alt="netflix-desktop-app--v1"/>
                             <p class="pr-2">Netflix</p>

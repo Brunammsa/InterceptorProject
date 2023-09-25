@@ -93,8 +93,8 @@
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200 dark:border-gray-600">
             <div class="px-4">
-                <div class="font-medium text-base text-white dark:text-gray-200">{{ Auth::user()->name }}</div>
-                <div class="font-medium text-sm text-white">{{ Auth::user()->email }}</div>
+                <div class="font-medium text-base text-blue-jeans dark:text-gray-200">{{ Auth::user()->name }}</div>
+                <div class="font-medium text-sm text-blue-jeans">{{ Auth::user()->email }}</div>
             </div>
 
             <div class="mt-3 space-y-1">
