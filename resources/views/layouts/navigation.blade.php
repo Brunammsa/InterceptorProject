@@ -15,9 +15,6 @@
                     <x-nav-link :href="route('search.search')" :active="request()->routeIs('search.search')">
                         {{ __('Buscar filme') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('search.indexMovie')" :active="request()->routeIs('search.indexMovie')">
-                        {{ __('Filme') }}
-                    </x-nav-link>
                     <x-nav-link :href="route('search.recentSearchs')" :active="request()->routeIs('search.recentSearchs')">
                         {{ __('Buscas recentes') }}
                     </x-nav-link>
