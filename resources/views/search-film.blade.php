@@ -1,10 +1,4 @@
 <x-app-layout>
-    {{-- <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200">
-            {{ __('Dashboard') }}
-        </h2>
-    </x-slot> --}}
-
     <div class="py-12">
         <div class="max-w-5xl mx-auto px-5 md:px-6 lg:px-8">
             <div class="bg-blue-jeans dark:bg-gray-800 overflow-hidden shadow-sm rounded-lg">
@@ -18,55 +12,40 @@
                         <x-text-input id="movies-name" class="block mt-1 md:w-80 lg:w-96" type="text" name="movies-name" placeholder="Digite o nome do filme" required autofocus/>
                     </div>
                 </div>
-                <div class="relative p-6 w-full rounded-xl bg-clip-border text-gray-700 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-5">
+                <div class="relative p-6 w-full bg-clip-border text-gray-700 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-5">
                     <div>
-                        <div class="block rounded-lg bg-gray-modificate shadow-lg dark:bg-neutral-700">
-                            <a href="#!">
-                                <img class="rounded-lg" src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg" alt=""/></a>
-                            <div class="p-6 text-center text-center">
-                                <h5
-                                class="mb-2 text-sm text-center font-medium leading-tight text-blue-jeans dark:text-neutral-50">
-                                2023
-                                </h5>
-                                <p class="mb-4 text-base text-blue-jeans dark:text-neutral-200">
-                                batman
-                                </p>
-                            </div>
+                        <div class="block rounded-lg bg-gray-modificate shadow-lg dark:bg-neutral-700 cursor-pointer">
+                            <a id="open-modal"><img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg" alt=""/></a>
+                        </div>
+                        <div class="text-center text-blue-jeans bg-gray-modificate rounded-b-lg">
+                            <h2>Pinóquio</h2>
+                            <p>2003</p>
                         </div>
                     </div>
                     <div>
-                        <div class="block rounded-lg bg-white shadow-lg dark:bg-neutral-700">
-                            <a href="#!">
-                                <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg" alt="" /></a>
-                            <div class="p-6 text-center">
-                                <h5
-                                class="mb-2 text-sm text-center font-medium leading-tight text-blue-jeans dark:text-neutral-50">
-                                2023
-                                </h5>
-                                <p class="mb-4 text-base text-blue-jeans dark:text-neutral-200">
-                                titanic
-                                </p>
-                            </div>
+                        <div class="block rounded-lg bg-gray-modificate shadow-lg dark:bg-neutral-700 cursor-pointer">
+                            <a id="open-modal"><img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg" alt=""/></a>
+                        </div>
+                        <div class="text-center text-blue-jeans bg-gray-modificate rounded-b-lg">
+                            <h2>Tarzan</h2>
+                            <p>2000</p>
                         </div>
                     </div>
                     <div>
-                        <div class="block rounded-lg bg-white shadow-lg dark:bg-neutral-700">
-                            <a href="#!">
-                                <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg" alt="" /></a>
-                            <div class="p-6 text-center">
-                                <h5
-                                class="mb-2 text-sm text-center font-medium leading-tight text-blue-jeans dark:text-neutral-50">
-                                2023
-                                </h5>
-                                <p class="mb-4 text-base text-blue-jeans dark:text-neutral-200">
-                                avengers
-                                </p>
-                            </div>
+                        <div class="block rounded-lg bg-gray-modificate shadow-lg dark:bg-neutral-700 cursor-pointer">
+                            <a id="open-modal"><img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg" alt=""/></a>
+                        </div>
+                        <div class="text-center text-blue-jeans bg-gray-modificate rounded-b-lg">
+                            <h2>A pequena sereia</h2>
+                            <p>2023</p>
                         </div>
                     </div>
-
-
-                    
+                    <div id="modal-background" class="hidden fixed inset-0 bg-black opacity-50"></div>
+                    <div id="modal" class="hidden fixed inset-0 flex items-center justify-center z-50">
+                        <div class="modal-body rounded-lg p-6">
+                            @include('index-movie')
+                        </div>
+                    </div>
                 </div>
                 <div class="text-gray-modificate p-6 flex justify-center">
                     1 2 3 ... 100
@@ -75,3 +54,19 @@
         </div>
     </div>
 </x-app-layout>
+
+<script>
+    function openModal() {
+        document.getElementById("modal-background").style.display = "block";
+        document.getElementById("modal").style.display = "flex";
+    }
+
+    document.getElementById("open-modal").addEventListener("click", function(e) {
+        e.preventDefault();
+        openModal();
+    });
+
+    document.getElementById("modal-footer").addEventListener("click", function() {
+        closeModal();
+    });
+</script>
