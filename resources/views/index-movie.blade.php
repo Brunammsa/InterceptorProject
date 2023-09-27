@@ -1,5 +1,5 @@
-<div class=" max-w-3xl mx-auto px-5 md:px-6 lg:px-8">
-    <div class="bg-gray-modificate overflow-hidden shadow-md rounded-lg">
+<div class=" max-w-3xl mx-auto">
+    <div class="bg-gray-modificate overflow-hidden rounded-lg shadow-lg">
         <div class="p-6 text-blue-jeans">
             <div class="flex flex-col md:grid md:grid-cols-3 lg:grid-cols-3 md:gap-10 lg:gap-20 items-center">
                 <div class="text-center md:col-span-1 lg:col-span-1">
@@ -51,14 +51,8 @@
                 <button type="button" id="modal-footer" class="border border-transparent bg-sky-500 hover:bg-sky-700 shadow-md rounded-md text-center text-sm p-2 text-white font-semibold">
                     Buscar
                 </button>
-                <button onclick="closeModal()">Fechar</button>
+                <button type="button" id="close-button">Fechar</button>
             </div>
         </div>
     </div>
 </div>
-<script>
-        function closeModal() {
-        document.getElementById("modal-background").style.display = "none";
-        document.getElementById("modal").style.display = "none";
-    }
-</script>

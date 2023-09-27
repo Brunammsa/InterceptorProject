@@ -40,12 +40,9 @@
                             <p>2023</p>
                         </div>
                     </div>
-                    <div id="modal-background" class="hidden fixed inset-0 bg-black opacity-50"></div>
-                    <div id="modal" class="hidden fixed inset-0 flex items-center justify-center z-50">
-                        <div class="modal-body rounded-lg p-6">
-                            @include('index-movie')
-                        </div>
-                    </div>
+                    <dialog class="rounded-lg shadow-lg">
+                        @include('index-movie')
+                    </dialog>
                 </div>
                 <div class="text-gray-modificate p-6 flex justify-center">
                     1 2 3 ... 100
@@ -56,17 +53,15 @@
 </x-app-layout>
 
 <script>
-    function openModal() {
-        document.getElementById("modal-background").style.display = "block";
-        document.getElementById("modal").style.display = "flex";
+    const open = document.getElementById("open-modal");
+    const modal = document.querySelector('dialog');
+    const close = document.getElementById("close-button")
+
+    open.onclick = function () {
+        modal.showModal();
     }
 
-    document.getElementById("open-modal").addEventListener("click", function(e) {
-        e.preventDefault();
-        openModal();
-    });
-
-    document.getElementById("modal-footer").addEventListener("click", function() {
-        closeModal();
-    });
+    close.onclick = function(){
+        modal.close();
+    }
 </script>
