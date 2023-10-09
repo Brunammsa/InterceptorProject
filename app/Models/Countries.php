@@ -10,7 +10,9 @@ class Countries extends Model
     use HasFactory;
 
     protected $fillable =[
-        'sortname',
+        'flag',
+        'code',
         'name',
+        'iso'
     ];
 }

@@ -50,4 +50,9 @@ class User extends Authenticatable
     {
         return $this->name === 'api' ? true : false;
     }
+
+    public function providers()
+    {
+        return $this->belongsToMany(Providers::class);
+    }
 }
