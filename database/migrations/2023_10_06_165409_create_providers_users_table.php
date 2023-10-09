@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('providers_users', function (Blueprint $table) {
             $table->id();
             $table->foreignId("providers_id")->constrained("providers");
-            $table->foreignId("users_id")->constrained("users");
+            $table->foreignId("users_id")->constrained("users")->onDelete('cascade');
         });
     }
 
