@@ -53,6 +53,6 @@ class User extends Authenticatable
 
     public function providers()
     {
-        return $this->belongsToMany(Providers::class);
+        return $this->belongsToMany(Provider::class, "providers_users", "users_id", "providers_id");
     }
 }
