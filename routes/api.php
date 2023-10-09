@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\ApiUserController;
 use App\Http\Controllers\LoginTokenController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -20,7 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::middleware(['auth:sanctum', 'can:user-api'])->group(function(){
-    
+    Route::get('user/{user}', [ApiUserController::class, 'show']);
 });
 
 Route::post('/login', [LoginTokenController::class, 'getToken']);
