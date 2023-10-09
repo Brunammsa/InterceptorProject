@@ -9,12 +9,19 @@ use Illuminate\Support\Facades\Gate;
 
 class ApiUserController extends Controller
 {
-    public function show(User $user)
+    public function show($user)
     {
         if (Gate::allows('user-api')) {
-            $uUIdUser = $user->uuid;
-            $user = User::where('uuid', $uUIdUser)->first();
-
+            $user = User::where('uuid', $user)->first();
+            if ($user) {
+                $data = [
+                    'name' => $user->name,
+                    'email' => $user->email,
+                    'providers' => $user->providers
+                ];
+        
+                return response()->json($data, 200);
+            }
             return response()->json($user, 200);
         }
 
